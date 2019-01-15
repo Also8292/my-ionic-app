@@ -1,0 +1,32 @@
+<!-- <ion-content padding id="content">
+  <button ion-button (click)="testBtn()">text</button>
+</ion-content> -->
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Langue</ion-label>
+      <ion-select><!--  [(ngModel)]="langue" -->
+        <ion-option value="anglais">Anglais</ion-option>
+        <ion-option value="français" selected>Français</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Theme</ion-label>
+      <ion-select><!--  [(ngModel)]="theme" -->
+        <ion-option value="clair" selected>Clair</ion-option>
+        <ion-option value="sombre">Sombre</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button color="dark" clear full (click)="goToAbout()">A propos</button>
+</ion-footer>

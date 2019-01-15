@@ -1,0 +1,36 @@
+<ion-menu [content]="content">
+  <ion-header menuToggle>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="card-background-page">
+    <ion-card>
+      <img src="../assets/imgs/hood1.jpg"/>
+    </ion-card>
+
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+    
+    <button ion-button class="social-btn" float (click)="changeColor()">
+        <ion-icon name="logo-facebook"></ion-icon>
+    </button>
+    <!-- <button ion-button class="social-btn">
+        <ion-icon name="logo-twitter"></ion-icon>
+    </button>
+    <button ion-button class="social-btn">
+        <ion-icon name="logo-linkedin"></ion-icon>
+    </button>
+    <button ion-button class="social-btn">
+        <ion-icon name="logo-github"></ion-icon>
+    </button> -->
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
