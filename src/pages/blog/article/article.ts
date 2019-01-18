@@ -25,7 +25,7 @@ export class ArticlePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient) {
     this.id = navParams.get("ident");
-    this.arts = this.http.get(this.ROOT_URL + "2.json");
+    this.arts = this.http.get(this.ROOT_URL + this.id + ".json");
     this.test = this.ROOT_URL + this.id + ".json";
   }
 

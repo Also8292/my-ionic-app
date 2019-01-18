@@ -1,15 +1,15 @@
 <ion-header>
-    <ion-navbar>
-        <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
+    <ion-navbar color="dark">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>{{ title }}</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="settingPopover($event)">
+          <ion-icon name="more"></ion-icon>
         </button>
-        <ion-title>{{ title }}</ion-title>
-        <ion-buttons end>
-          <button ion-button icon-only (click)="settingPopover($event)">
-            <ion-icon name="more"></ion-icon>
-          </button>
-        </ion-buttons>
-      </ion-navbar>
+      </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>

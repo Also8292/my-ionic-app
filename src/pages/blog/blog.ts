@@ -32,9 +32,12 @@ export class BlogPage {
   }
 
   goToArticle(id) {
+
+    console.log("Click");
     this.navCtrl.push(ArticlePage, {
       ident: id
     });
+    
   }
 
 }

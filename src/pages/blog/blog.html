@@ -2,39 +2,13 @@
 
 <ion-content padding>
   
-    <ion-card padding class="card" *ngFor="let article of articles | async">
-      <img src="../../assets/imgs/aquila.png"/>
-      <ion-card-content>
-        <ion-card-title>{{ article.title }}</ion-card-title>
-        <p>{{ article.content }}</p>
-        <button ion-button (click)="goToArticle(3)" full>voir l'article</button>
-      </ion-card-content>
-    </ion-card>
-<!--   
-    <ion-card padding class="card">
-        <img src="../../assets/imgs/aquila.png"/>
-        <ion-card-content>
-          <ion-card-title>
-            Aquila File Transfert
-            </ion-card-title>
-          <p>
-            Aquila est un service de transfert de fichier en ligne.
-          </p>
-          <button ion-button (click)="goToArticle()" full>voir l'article</button>
-        </ion-card-content>
-      </ion-card>
-  
-      <ion-card padding class="card">
-          <img src="../../assets/imgs/aquila.png"/>
-          <ion-card-content>
-            <ion-card-title>
-              Aquila File Transfert
-              </ion-card-title>
-            <p>
-              Aquila est un service de transfert de fichier en ligne.
-            </p>
-            <button ion-button (click)="goToArticle()" full>voir l'article</button>
-          </ion-card-content>
-        </ion-card>
-       -->
+  <ion-card padding class="card" *ngFor="let article of articles | async">
+    <!-- <img src="../../assets/imgs/aquila.png"/> -->
+    <ion-card-content>
+      <ion-card-title>{{ article.title }}</ion-card-title>
+      <p>{{ article.content }}</p>
+      <button ion-button (click)="goToArticle(article.id)" full>voir l'article</button>
+    </ion-card-content>
+  </ion-card>
+
   </ion-content>
