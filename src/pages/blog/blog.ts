@@ -25,17 +25,21 @@ export class BlogPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient) {
     this.title = "Blog";
     this.articles = this.http.get(this.ROOT_URL);
+    // console.log(this.articles);
+    
   }
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad BlogPage');
   }
 
-  goToArticle(id) {
-
-    console.log("Click");
+  goToArticle(id, title, content, datePub) {
+    // console.log("Click");
     this.navCtrl.push(ArticlePage, {
-      ident: id
+      id: id,
+      title: title,
+      content: content,
+      datePub: datePub
     });
     
   }
