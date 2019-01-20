@@ -48,16 +48,11 @@ export class MyApp {
   }
 
   openPage(page) {
-    let options: NativeTransitionOptions = {
-      direction: 'up',
-      duration: 600
-    }
-    this.nativePageTransitions.curl(options);
+    // let options: NativeTransitionOptions = {
+    //   direction: 'up',
+    //   duration: 600
+    // }
+    // this.nativePageTransitions.curl(options);
     this.nav.setRoot(page.component);
   }
-
-  changeColor() {
-    // document.querySelector('.content').style.backgroundColor = "#222";
-  }
 }
-;

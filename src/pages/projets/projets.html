@@ -2,43 +2,16 @@
 
 
 <ion-content padding>
-  <ion-card padding class="card">
-    <img src="../../assets/imgs/aquila.png"/>
+  <ion-card padding class="card" *ngFor="let project of projects | async">
+    <img src="http://127.0.0.1:8000/uploads/images/projects/{{ project.image }}"/>
     <ion-card-content>
       <ion-card-title>
-        Aquila File Transfert
-        </ion-card-title>
+        {{ project.title }}
+      </ion-card-title>
       <p>
-        Aquila est un service de transfert de fichier en ligne.
+        {{ project.description }}
       </p>
-      <button ion-button (click)="goToProject()" full>detail</button>
+      <button ion-button (click)="goToProject(project.id, project.title, project.description, project.duree, project.image)" full>detail</button>
     </ion-card-content>
   </ion-card>
-
-  <ion-card padding class="card">
-      <img src="../../assets/imgs/aquila.png"/>
-      <ion-card-content>
-        <ion-card-title>
-          Aquila File Transfert
-          </ion-card-title>
-        <p>
-          Aquila est un service de transfert de fichier en ligne.
-        </p>
-        <button ion-button (click)="goToProject()" full>detail</button>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card padding class="card">
-        <img src="../../assets/imgs/aquila.png"/>
-        <ion-card-content>
-          <ion-card-title>
-            Aquila File Transfert
-            </ion-card-title>
-          <p>
-            Aquila est un service de transfert de fichier en ligne.
-          </p>
-          <button ion-button (click)="goToProject()" full>detail</button>
-        </ion-card-content>
-      </ion-card>
-    
 </ion-content>

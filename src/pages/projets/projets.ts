@@ -1,6 +1,8 @@
 import { ProjetPage } from './projet/projet';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -9,12 +11,25 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ProjetsPage {
   title: string;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  readonly ROOT_URL = "http://127.0.0.1:8000/api/projects.json/";
+  projects: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient) {
     this.title = "Projets";
+
+    this.projects = this.http.get(this.ROOT_URL);
   }
 
-  goToProject() {
-    this.navCtrl.push(ProjetPage);
+  goToProject(id, title, description, duree, image) {
+    this.navCtrl.push(ProjetPage,
+      {
+        title: title,
+        description: description,
+        duree: duree,
+        image: image
+      }  
+    );
   }
 
 }

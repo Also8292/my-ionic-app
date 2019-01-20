@@ -14,7 +14,18 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ProjetPage {
 
+  id: any;
+  title: any;
+  description: any;
+  duree: any;
+  image: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.id = navParams.get("id");
+    this.title = navParams.get("title");
+    this.description = navParams.get("description");
+    this.duree = navParams.get("duree");
+    this.image = navParams.get("image");
   }
 
   // ionViewDidLoad() {

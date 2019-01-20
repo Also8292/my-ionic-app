@@ -11,25 +11,10 @@ export class MoreOptionComponent {
   @Input() title: string;
   constructor(public popoverCtrl: PopoverController) {}
 
-  settingPopover(myEvent) {
+  settingPopover(even) {
     let popover = this.popoverCtrl.create(SettingPage);
     popover.present({
-      ev: myEvent
+      ev: even
     });
   }
 }
-
-
-
-// import { PopoverController } from 'ionic-angular';
-// // import { MyPopOverPage } from './my-pop-over';
-
-// export class MoreOptionComponent {
-
-//   constructor(public popoverCtrl: PopoverController) { }
-
-//   presentPopover() {
-//     // const popover = this.popoverCtrl.create();
-//     // popover.present();
-//   }
-// }
