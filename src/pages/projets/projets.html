@@ -3,7 +3,7 @@
 
 <ion-content padding>
   <ion-card padding class="card" *ngFor="let project of projects | async">
-    <img src="http://127.0.0.1:8000/uploads/images/projects/{{ project.image }}"/>
+    <img src="{{image_url}}{{ project.image }}"/>
     <ion-card-content>
       <ion-card-title>
         {{ project.title }}

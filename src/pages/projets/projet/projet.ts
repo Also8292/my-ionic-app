@@ -19,6 +19,7 @@ export class ProjetPage {
   description: any;
   duree: any;
   image: any;
+  image_url: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.id = navParams.get("id");
@@ -26,6 +27,7 @@ export class ProjetPage {
     this.description = navParams.get("description");
     this.duree = navParams.get("duree");
     this.image = navParams.get("image");
+    this.image_url = navParams.get('image_url');
   }
 
   // ionViewDidLoad() {
